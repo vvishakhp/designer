@@ -3,6 +3,7 @@ import { CanvasService } from '../../services/canvas.service';
 import { CursorType } from '../../models/enums';
 import { WorkflowItemRegistryService } from '../../services/workflowItemRegistry.service';
 import { WorkflowItemType } from '../../models/workflowItem';
+import { ActivityInfo } from '../../models/activityInfo';
 
 @Component({
   selector: 'rpa-tool-box',
@@ -11,7 +12,7 @@ import { WorkflowItemType } from '../../models/workflowItem';
 })
 export class ToolBoxComponent implements OnInit {
 
-  items: { name: string, type: WorkflowItemType }[] = [];
+  items: { name: string, type: ActivityInfo }[] = [];
 
   constructor(private canvaService: CanvasService, private itemsRegistry: WorkflowItemRegistryService) { }
 

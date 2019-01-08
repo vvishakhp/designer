@@ -9,7 +9,17 @@ import { WorkflowItemRegistryService } from '../../services/workflowItemRegistry
 export class WorkflowDesignerComponent implements OnInit {
 
   constructor(workflowItemRegistry: WorkflowItemRegistryService) {
-    workflowItemRegistry.addItem('mouse/click', { icon: 'mouse' });
+    workflowItemRegistry.addItem('mouse/click', {
+      name: 'IsDecimal',
+      parameteres: [
+        {
+          name: 'Value',
+          required: true,
+          valueTypes: []
+        }
+      ],
+      type: 'RPA.Genie.Activities.IsDecimalActivity, RPA.Genie'
+    });
   }
 
   ngOnInit() {

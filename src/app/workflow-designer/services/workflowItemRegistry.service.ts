@@ -1,13 +1,14 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { WorkflowItemType } from '../models/workflowItem';
+import { ActivityInfo } from '../models/activityInfo';
 
 @Injectable()
 export class WorkflowItemRegistryService {
 
-    private workflowItemTypes: { [key: string]: WorkflowItemType } = {};
+    private workflowItemTypes: { [key: string]: ActivityInfo } = {};
     public toolChanged: EventEmitter<void> = new EventEmitter();
 
-    addItem(name: string, type: WorkflowItemType) {
+    addItem(name: string, type: ActivityInfo) {
         if (this.workflowItemTypes[name]) {
             throw new Error('The type with this key alredy exists');
         }

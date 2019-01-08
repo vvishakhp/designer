@@ -6,5 +6,6 @@ export class ActivityInfo {
 
 export class ParameterInfo {
     name: string;
-    type: string;
+    valueTypes: string[];
+    required: boolean;
 }

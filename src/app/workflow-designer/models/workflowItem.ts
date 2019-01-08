@@ -1,3 +1,5 @@
+import { ActivityInfo } from './activityInfo';
+
 export interface WorkflowItemType {
     icon: string;
 }
@@ -8,5 +10,5 @@ export interface Connection {
 }
 
 export class WorkflowItem {
-    type: WorkflowItemType;
+    type: ActivityInfo;
 }
